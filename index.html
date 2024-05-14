@@ -6,7 +6,7 @@
     <script src="https://cdn.staticfile.org/echarts/4.3.0/echarts.min.js"></script>
 </head>
 <body>
-<div id="main" style="width: 600px;height:400px;"></div>
+<div id="main" style="width: 800px;height:600px;"></div>
 <script type="text/javascript">
 
 var chartDom = document.getElementById('main');
@@ -18,9 +18,9 @@ option = {
 tooltip: {
 trigger: 'axis'
 },
-legend: {
-data: ['Email', 'Union Ads', 'Video Ads', 'Direct', 'Search Engine']
-},
+    legend: {
+        data: ['2020 城镇', '2021 城镇', '2020 农村', '2021 农村']
+    },
 grid: {
 left: '3%',
 right: '4%',
@@ -32,51 +32,55 @@ feature: {
 saveAsImage: {}
 }
 },
-xAxis: {
-type: 'category',
-boundaryGap: false,
-data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
-},
-yAxis: {
-type: 'value'
-},
-series: [
-{
-name: 'Email',
-type: 'line',
-stack: 'Total',
-data: [120, 132, 101, 134, 90, 230, 210]
-},
-{
-name: 'Union Ads',
-type: 'line',
-stack: 'Total',
-data: [220, 182, 191, 234, 290, 330, 310]
-},
-{
-name: 'Video Ads',
-type: 'line',
-stack: 'Total',
-data: [150, 232, 201, 154, 190, 330, 410]
-},
-{
-name: 'Direct',
-type: 'line',
-stack: 'Total',
-data: [320, 332, 301, 334, 390, 330, 320]
-},
-{
-name: 'Search Engine',
-type: 'line',
-stack: 'Total',
-data: [820, 932, 901, 934, 1290, 1330, 1320]
-}
-]
+    xAxis: {
+        axisLabel:{
+            interval:0,
+            rotate:45,//倾斜度 -90 至 90 默认为0
+            margin:2,
+            textStyle:{
+                fontWeight:"bolder",
+                color:"#000000"
+            }
+        },
+        type: 'category',
+        data: ['四川', '成都市', '自贡市', '攀枝花市', '泸州市', '德阳市', '绵阳市', '广元市', '遂宁市', '内江市', '乐山市', '南充市', '眉山市', '宜宾市', '广安市', '达州市', '雅安市', '巴中市', '资阳市', '阿坝藏族羌族自治州', '甘孜藏族自治州', '凉山彝族自治州']
+        // axisLabel: {
+        //     rotate: -90
+        // }
+    },
+
+    yAxis: {
+        type: 'value'
+    },
+    series: [
+        {
+            name: '2020 城镇',
+            type: 'line',
+            data: [38253, 48593, 38781, 44209, 39547, 39360, 39680, 35740, 37117, 38337, 38931, 36057, 38892, 39166, 38071, 36001, 37191, 35821, 37562, 37011, 36521, 34636]
+        },
+        {
+            name: '2021 城镇',
+            type: 'line',
+            data: [41444, 52633, 41977, 47915, 42996, 42764, 43150, 39008, 40324, 41756, 42340, 39280, 42137, 42779, 41307, 39249, 40422, 38989, 40636, 40132, 39497, 37452]
+        },
+        {
+            name: '2020 农村',
+            type: 'line',
+            data: [15929, 26432, 18788, 19938, 18035, 19790, 19303, 14367, 17815, 17918, 18175, 16431, 19730, 18569, 17867, 16876, 15890, 14429, 19076, 15539, 13967, 15232]
+        },
+        {
+            name: '2021 农村',
+            type: 'line',
+            data: [17575, 29126, 20694, 21979, 20008, 21858, 21340, 15925, 19727, 19819, 20043, 18247, 21771, 20591, 19752, 18638, 17580, 15962, 21023, 17161, 15379, 16808]
+        }
+    ]
 };
 
 option && myChart.setOption(option);
 </script>
 </body>
 </html>
+
+
 
 
