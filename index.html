@@ -6,7 +6,7 @@
     <script src="https://cdn.staticfile.org/echarts/4.3.0/echarts.min.js"></script>
 </head>
 <body>
-<div id="main" style="width: 800px;height:600px;"></div>
+<div id="main" style="width: 800px;height:500px;"></div>
 <script type="text/javascript">
 
 var chartDom = document.getElementById('main');
@@ -14,11 +14,14 @@ var myChart = echarts.init(chartDom);
 var option;
 
 option = {
-
+    title: {
+        text: '四川省人均可支配收入变化 (2020-2021)'
+    },
 tooltip: {
 trigger: 'axis'
 },
     legend: {
+        bottom:1,
         data: ['2020 城镇', '2021 城镇', '2020 农村', '2021 农村']
     },
 grid: {
@@ -80,7 +83,4 @@ option && myChart.setOption(option);
 </script>
 </body>
 </html>
-
-
-
 
