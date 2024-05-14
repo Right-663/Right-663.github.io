@@ -1,80 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-      <script src="https://cdn.staticfile.org/echarts/4.3.0/echarts.min.js"></script>
-</head>
-<body>
-<div id="main" style="width: 600px;height:400px;"></div>
-<script type="text/javascript">
+<p>Hello 大家好</p>
+<p>我是霸都丶傲天，这是我的个人网站。 </p>
+<p>很高兴你来到这里, 你可以在以下的网站找到我</p>
 
-var chartDom = document.getElementById('main');
-var myChart = echarts.init(chartDom);
-var option;
-
-option = {
-
-tooltip: {
-trigger: 'axis'
-},
-legend: {
-data: ['Email', 'Union Ads', 'Video Ads', 'Direct', 'Search Engine']
-},
-grid: {
-left: '3%',
-right: '4%',
-bottom: '3%',
-containLabel: true
-},
-toolbox: {
-feature: {
-saveAsImage: {}
-}
-},
-xAxis: {
-type: 'category',
-boundaryGap: false,
-data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
-},
-yAxis: {
-type: 'value'
-},
-series: [
-{
-name: 'Email',
-type: 'line',
-stack: 'Total',
-data: [120, 132, 101, 134, 90, 230, 210]
-},
-{
-name: 'Union Ads',
-type: 'line',
-stack: 'Total',
-data: [220, 182, 191, 234, 290, 330, 310]
-},
-{
-name: 'Video Ads',
-type: 'line',
-stack: 'Total',
-data: [150, 232, 201, 154, 190, 330, 410]
-},
-{
-name: 'Direct',
-type: 'line',
-stack: 'Total',
-data: [320, 332, 301, 334, 390, 330, 320]
-},
-{
-name: 'Search Engine',
-type: 'line',
-stack: 'Total',
-data: [820, 932, 901, 934, 1290, 1330, 1320]
-}
-]
-};
-
-option && myChart.setOption(option);
-</script>
-</body>
-</html>
+<ul>
+  <li> <a href="https://www.zhihu.com/people/AJLoveChina">知乎</a> </li>
+  <li> <a href="http://hejie.nigeerhuo.com">我的博客(已经不更细了,现在在知乎写文章)</a> </li>
+</ul>
